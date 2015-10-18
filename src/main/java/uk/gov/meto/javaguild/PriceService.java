@@ -15,10 +15,14 @@ public class PriceService {
 
     public int getPrice() {
         try {
-            Thread.sleep((int) (Math.random() * (maxDelay - minDelay) + minDelay));
+            Thread.sleep(delay());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return random.nextInt(1000);
+    }
+
+    private int delay() {
+        return (int) (Math.random() * (maxDelay - minDelay) + minDelay);
     }
 }
