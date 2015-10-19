@@ -17,14 +17,7 @@ import java.util.concurrent.TimeUnit;
     public static void main(String[] args) throws InterruptedException {
         Runtime.getRuntime().addShutdownHook(new Thread(executor::shutdown));
 
-        executor.scheduleWithFixedDelay(() -> {
-            final int price = priceService.getPrice();
-            rollingBuffer.add(price);
-            SwingUtilities.invokeLater(() -> {
-                priceDisplay.setPrice(price);
-                priceDisplay.setAverage(rollingBuffer.getAverage());
-            });
-        }, 0, 500, TimeUnit.MILLISECONDS);
+        executor.scheduleWithFixedDelay(...);
 
     }
 
