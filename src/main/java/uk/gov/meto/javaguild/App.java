@@ -18,10 +18,7 @@ import java.util.concurrent.TimeUnit;
 
     public static void main(String[] args) throws InterruptedException {
 
-        subscription = priceService
-                .prices(Observable.interval(500, TimeUnit.MILLISECONDS))
-                .observeOn(SwingScheduler.getInstance())
-                .subscribe(priceDisplay::setPrice);
+        subscription = ...;
     }
 
 }
