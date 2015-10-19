@@ -41,7 +41,7 @@ class RollingBufferTest extends Specification {
             buffer.add(2)
             buffer.add(1)
             buffer.add(10)
-        buffer.add(20)
+            buffer.add(20)
         then:
             buffer.getAverage() == (3 + 2 + 1 + 10 + 20)/5 as double
     }
