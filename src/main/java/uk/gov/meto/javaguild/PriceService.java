@@ -20,10 +20,7 @@ public class PriceService {
         return (int) (Math.random() * (maxDelay - minDelay) + minDelay);
     }
 
-    public Observable<Integer> prices(Observable<Long> trigger) {
-        return trigger.flatMap(ignored ->
-                Observable.just(random.nextInt(1000)))
-                .delay(delayMillis(), TimeUnit.MILLISECONDS);
+    public Observable<Integer> prices(...
     }
 
 }
